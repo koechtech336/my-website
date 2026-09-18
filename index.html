@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mambo Fashion</title><link rel="stylesheet" href="style.css">
+
+</head><body><!-- Header -->
+<header>
+    <h1>Mambo Fashion</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+
+<!-- Welcome Section -->
+<section class="hero">
+
+    <h2>Welcome to Mambo Fashion</h2>
+
+    <p>
+        Discover beautiful and stylish fashion
+        for everyone.
+    </p>
+
+    <button>Shop Now</button>
+
+</section>
+
+
+<!-- Products Section -->
+<section class="products">
+
+    <h2>Our Products</h2>
+
+
+    <!-- Product 1 -->
+    <div class="product">
+
+<a href="https://wa.me/254704982642" target="_blank">
+    Order Now
+</a>
+          
+      
+
+        
+
+    </div>
+
+
+    <!-- Product 2 -->
+    <div class="product">
+
+        <h3>Men's Shirt</h3>
+
+        <p>Stylish casual shirt</p>
+
+        <p>
+            <strong>KSh 1,500</strong>
+        </p>
+
+        <button><a href="https://wa.me/254704982642?text=Hello%20Mambo%20Fashion%2C%20I%20would%20like%20to%20order%20the%20Beautiful%20Dress%20for%20KSh%202500." target="_blank">
+    <button>Order Now</button>
+        </a></button>
+
+    </div>
+
+
+    <!-- Product 3 -->
+    <div class="product">
+
+        <h3>Fashion Handbag</h3>
+
+        <p>Modern ladies handbag</p>
+
+        <p>
+            <strong>KSh 2,000</strong>
+        </p>
+
+        <a href="https://wa.me/254704982642">
+    <button>Order Now</button>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- About Section -->
+<section class="about">
+
+    <h2>About Mambo Fashion</h2>
+
+    <p>
+        Mambo Fashion brings you stylish,
+        affordable and quality fashion.
+    </p>
+
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Phone: <section class="contact"><h2>Contact Us</h2>
+
+<p>
+    📞 <a href="tel:0704982642">Call Us</a>
+</p>
+
+<p>
+    ✉️ <a href="mailto:cynthiachepleting66">Email Us</a>
+</p>
+
+    </section></p>
+
+    <p>Email: cynthiachepleting66@.com</p>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        © 2026 Mambo Fashion. All rights reserved.
+    </p>
+
+</footer>
+
+</body></html>
+<!-- Login Section -->
+<section class="login">
+    <h2>Login</h2>
+
+    <form onsubmit="login(event)">
+        <label>Username</label>
+        <input type="text" id="username" required>
+
+        <label>Password</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+        <p id="message"></p>
+    </form>
+</section>
+<script>
+function login(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (username === "admin" && password === "1234") {
+        document.getElementById("message").textContent =
+            "Login successful!";
+    } else {
+        document.getElementById("message").textContent =
+            "Wrong username or password.";
+    }
+}
+  </script>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Mambo Fashion. All rights reserved.</p>
+</footer>
