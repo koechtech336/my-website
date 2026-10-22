@@ -24,8 +24,36 @@ h1{font-size:32px;line-height:1.1} h1 span{color:#00ff88}
 <div class="paybox">
 <p style="color:#00ff88;font-weight:900;margin-bottom:14px">💳 PAY FROM ANYWHERE - INSTANT START</p>
 <a class="btn btn-blue" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=cynthiachepleting66@gmail.com&amount=35&currency_code=USD&item_name=Website%20Starter">💙 Pay $35 via PayPal</a>
-<a class="btn btn-blue" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=cynthiachepleting66@gmail.com&amount=95&currency_code=USD&item_name=Business%20Pro" style="background:#0d2a45;border:1px solid #0070ba">💙 Pay $95 Pro</a>
-<div style="background:#0a0a0a;padding:12px;border-radius:10px;text-align:left;font-size:13px;margin-top:12px">
+<script src="https://www.paypal.com/sdk/js?client-id=BAAYkAf4e6F_KUMHeumtFXWIPl_j-2wpG7PDPHUHikSd61NCG_tNGFv0k6P_Ig-YrlK8B59oRBFI-OasC0&currency=USD"></script>
+
+<div id="paypal-35" style="margin:12px auto; max-width:380px;"></div>
+<div id="paypal-95" style="margin:12px auto; max-width:380px;"></div>
+
+<script>
+paypal.Buttons({
+  style: { layout: 'vertical', color: 'blue', label: 'pay' },
+  createOrder: function(data, actions) {
+    return actions.order.create({ purchase_units: [{ amount: { value: '35.00' }, description: 'Website Starter' }] });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      alert('Thanks ' + details.payer.name.given_name + '! Payment $35 received. WhatsApp us 0704 982 642');
+    });
+  }
+}).render('#paypal-35');
+
+paypal.Buttons({
+  style: { layout: 'vertical', color: 'gold', label: 'pay' },
+  createOrder: function(data, actions) {
+    return actions.order.create({ purchase_units: [{ amount: { value: '95.00' }, description: 'Business Pro' }] });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      alert('Thanks ' + details.payer.name.given_name + '! Payment $95 Pro received. WhatsApp us 0704 982 642');
+    });
+  }
+}).render('#paypal-95');
+</script> style="background:#0a0a0a;padding:12px;border-radius:10px;text-align:left;font-size:13px;margin-top:12px">
 🇰🇪 M-Pesa: 0704 982 642<br>
 📧 PayPal: cynthiachepleting66@gmail.com
 </div>
