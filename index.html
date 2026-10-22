@@ -1,67 +1,49 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Brimin Koech | $35 Websites Nairobi to World</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brimin Solutions - Pay</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#080808;color:#fff;font-family:Arial,sans-serif;text-align:center}
-.hero{padding:50px 20px;background:radial-gradient(circle at top,#132a1b,#080808)}
-h1{font-size:32px;line-height:1.1} h1 span{color:#00ff88}
-.btn{display:block;padding:14px;border-radius:14px;text-decoration:none;font-weight:900;margin:12px auto;width:90%;max-width:380px}
-.btn-green{background:#00ff88;color:#000}
-.btn-blue{background:#0070ba;color:#fff}
-.paybox{background:#111;border:1.5px solid #00ff88;border-radius:16px;padding:18px;max-width:440px;margin:25px auto}
+body{background:#000;color:#fff;font-family:Arial;text-align:center;padding:20px;margin:0}
+.container{max-width:400px;margin:auto;background:#111;padding:20px;border-radius:15px;border:1px solid #333}
+h1{color:#0f0}
+h2{color:gold}
+.btn{display:block;padding:14px;border-radius:8px;font-weight:bold;text-decoration:none;margin:10px 0}
+.paypal-blue{background:#0070ba;color:#fff}
+.paypal-gold{background:#ffc439;color:#000}
+.mpesa-box{background:#0a0a0a;padding:12px;border-radius:10px;text-align:left;font-size:13px;margin-top:12px;border:1px solid #222}
 </style>
 </head>
 <body>
-<div class="hero">
-<h1>Top Developer From<br><span>Nairobi to World</span></h1>
-<p style="color:#aaa;margin:15px">I'm Brimin Koech from Rongai. US agencies charge $500. I charge $35.</p>
+<div class="container">
+<h1>BRIMIN SOLUTIONS</h1>
+<p>Professional Websites for Your Business</p>
 
-<div class="paybox">
-<p style="color:#00ff88;font-weight:900;margin-bottom:14px">💳 PAY FROM ANYWHERE - INSTANT START</p>
+<!-- STARTER -->
+<h2 style="color:#0f0">STARTER - $35</h2>
+<p>1-Page Professional Website</p>
+<a href="https://www.paypal.com/paypalme/cynthiachepleting66/35USD" target="_blank" class="btn paypal-blue">💳 Pay $35 with PayPal</a>
+<a href="https://www.paypal.com/paypalme/cynthiachepleting66/35USD" target="_blank" class="btn" style="background:#fff;color:#000">Debit or Credit Card via PayPal</a>
 
-<script src="https://www.paypal.com/sdk/js?client-id=BAAYkAf4e6F_KUMHeumtFXWIPl_j-2wpG7PDPHUHikSd61NCG_tNGFv0k6P_Ig-YrlK8B59oRBFI-OasC0&currency=USD"></script>
+<hr style="margin:20px 0;border:0;border-top:1px solid #333">
 
-<div id="paypal-35" style="margin:12px auto; max-width:380px;"></div>
-<div id="paypal-95" style="margin:12px auto; max-width:380px;"></div>
+<!-- BUSINESS PRO -->
+<h2>BUSINESS PRO - $95 BEST VALUE</h2>
+<p>5-Page Website + Domain + SEO</p>
+<a href="https://www.paypal.com/paypalme/cynthiachepleting66/95USD" target="_blank" class="btn paypal-gold">💳 Pay $95 with PayPal</a>
+<a href="https://www.paypal.com/paypalme/cynthiachepleting66/95USD" target="_blank" class="btn" style="background:#fff;color:#000">Debit or Credit Card via PayPal</a>
 
-<script>
-paypal.Buttons({
-  style: { layout: 'vertical', color: 'blue', label: 'pay' },
-  createOrder: function(data, actions) {
-    return actions.order.create({ purchase_units: [{ amount: { value: '35.00' }, description: 'Website Starter' }] });
-  },
-  onApprove: function(data, actions) {
-    return actions.order.capture().then(function(details) {
-      alert('Thanks ' + details.payer.name.given_name + '! Payment $35 received. WhatsApp us 0704 982 642');
-    });
-  }
-}).render('#paypal-35');
-
-paypal.Buttons({
-  style: { layout: 'vertical', color: 'gold', label: 'pay' },
-  createOrder: function(data, actions) {
-    return actions.order.create({ purchase_units: [{ amount: { value: '95.00' }, description: 'Business Pro' }] });
-  },
-  onApprove: function(data, actions) {
-    return actions.order.capture().then(function(details) {
-      alert('Thanks ' + details.payer.name.given_name + '! Payment $95 Pro received. WhatsApp us 0704 982 642');
-    });
-  }
-}).render('#paypal-95');
-</script> 
-<div style="background:#0a0a0a;padding:12px;border-radius:10px;text-align:left;font-size:13px;margin-top:12px">
+<!-- M-PESA + EMAIL BOX -->
+<div class="mpesa-box">
 🇰🇪 M-Pesa: 0704 982 642<br>
-📧 PayPal: cynthiachepleting66@gmail.com
-</div>
+📧 PayPal: cynthiachepleting66@gmail.com<br><br>
+✅ After payment, WhatsApp your business name + logo to 0704 982 642<br>
+🚀 Website delivered in 24 Hours
 </div>
 
-<a class="btn btn-green" href="https://wa.me/254704982642">💬 WhatsApp 0704 982 642</a>
-<p style="color:#666;font-size:12px;margin-top:20px">Site will be live in 60 seconds after Commit</p>
+<p style="font-size:12px;color:#888;margin-top:15px">🔒 Powered by PayPal - Secure Checkout</p>
 </div>
 </body>
 </html>
