@@ -1,48 +1,49 @@
 "use client";
 import { useState } from "react";
 
-export default function PayButtons() {
+export default function Page() {
   const [msg, setMsg] = useState("");
-
   const mpesaNumber = "254704982642";
   const mpesaName = "EDWIN KOECH";
 
-  const handleWorldRemit = (amount) => {
+  const handleWorldRemit = (amount: number) => {
     navigator.clipboard.writeText(mpesaNumber);
-    setMsg(`✓ COPIED: ${mpesaNumber} (${mpesaName}) - Paste this number in WorldRemit to pay $${amount}`);
-    
-    // Open WorldRemit for them
+    setMsg(`✓ COPIED: ${mpesaNumber} (${mpesaName}) - Paste in WorldRemit to pay $${amount}`);
     window.open("https://www.worldremit.com/en", "_blank");
-
-    // Clear message after 8 seconds
     setTimeout(() => setMsg(""), 8000);
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
-      
-      <button
-        onClick={() => handleWorldRemit(35)}
-        style={{ background: "#0070f3", color: "white", padding: "12px 24px", borderRadius: "8px", border: "none", margin: "5px", cursor: "pointer", fontWeight: "bold" }}
-      >
-        Pay $35 via WorldRemit / M-Pesa
-      </button>
+    <div style={{ maxWidth: "600px", margin: "0 auto", padding: "40px 20px", fontFamily: "Arial", textAlign: "center" }}>
+      <h1>Brimin Academic Help</h1>
+      <p>Affordable Help for USA Students</p>
+      <p>Pay via WorldRemit to M-Pesa</p>
 
-      <button
-        onClick={() => handleWorldRemit(95)}
-        style={{ background: "#000", color: "white", padding: "12px 24px", borderRadius: "8px", border: "none", margin: "5px", cursor: "pointer", fontWeight: "bold" }}
-      >
-        Pay $95 via WorldRemit / M-Pesa
-      </button>
+      <div style={{ marginTop: "30px" }}>
+        <button
+          onClick={() => handleWorldRemit(35)}
+          style={{ background: "#0070f3", color: "white", padding: "14px 28px", borderRadius: "8px", border: "none", margin: "8px", cursor: "pointer", fontWeight: "bold", width: "100%" }}
+        >
+          Pay $35 via WorldRemit / M-Pesa
+        </button>
+
+        <button
+          onClick={() => handleWorldRemit(95)}
+          style={{ background: "#000", color: "white", padding: "14px 28px", borderRadius: "8px", border: "none", margin: "8px", cursor: "pointer", fontWeight: "bold", width: "100%" }}
+        >
+          Pay $95 via WorldRemit / M-Pesa
+        </button>
+      </div>
 
       {msg && (
-        <p style={{ color: "green", fontWeight: "bold", marginTop: "15px", background: "#e6ffe6", padding: "10px", borderRadius: "6px" }}>
+        <p style={{ color: "green", fontWeight: "bold", marginTop: "20px", background: "#e6ffe6", padding: "12px", borderRadius: "8px" }}>
           {msg}
         </p>
       )}
 
-      <p style={{ fontSize: "12px", marginTop: "10px" }}>
-        After paying, send receipt to WhatsApp: +254704982642
+      <p style={{ fontSize: "13px", marginTop: "20px" }}>
+        M-Pesa: {mpesaNumber} ({mpesaName})<br/>
+        After paying, send receipt to WhatsApp: {mpesaNumber}
       </p>
     </div>
   );
