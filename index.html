@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brimin Solutions</title>
-<style>body{background:#000;color:#fff;font-family:Arial;text-align:center;padding:15px;margin:0}.container{max-width:420px;margin:auto;background:#111;padding:22px;border-radius:15px;border:1px solid #333}h1{color:#0f0}.btn{display:block;padding:16px;border-radius:10px;font-weight:bold;text-decoration:none;margin:12px 0;text-align:center}.blue{background:#0070ba;color:#fff}.gold{background:#ffc439;color:#000}.green{background:#25D366;color:#fff}.box{background:#0a0a0a;padding:14px;border-radius:10px;text-align:left;font-size:13px;margin-top:15px;border:1px solid #222}</style>
-</head>
-<body>
-<div class="container">
-<h1>BRIMIN SOLUTIONS</h1>
-<p>Websites from Rongai to the World</p><hr>
-<h2 style="color:#0f0">STARTER - $35</h2>
-<p>1 Page + Mobile + WhatsApp</p>
-<a href="https://www.worldremit.com/en/us/en/send-to/kenya" target="_blank" class="btn blue">🌍 Pay $35 - WorldRemit to M-Pesa</a>
-<a href="https://wa.me/254704982642?text=Hi%20I%20want%20$35%20website" target="_blank" class="btn green">💬 Order $35 WhatsApp</a>
-<hr>
-<h2 style="color:gold">BUSINESS PRO - $95</h2>
-<p>5 Pages + Domain + SEO</p>
-<a href="https://www.worldremit.com/en/us/en/send-to/kenya" target="_blank" class="btn gold">🌍 Pay $95 - BEST VALUE</a>
-<a href="https://wa.me/254704982642?text=Hi%20I%20want%20$95%20website" target="_blank" class="btn green">💬 Order $95 WhatsApp</a>
-<div class="box">
-🇰🇪 M-Pesa: <b>0704 982 642</b><br>
-WorldRemit: Send to <b>254704982642</b><br>
-Name: <b>Edwin Koech</b><br><br>
-<b>USA CLIENTS:</b> Click blue/gold button → USA to Kenya → Mobile Money → M-Pesa → Enter <b>254704982642</b> → Send $35 or $95
-</div>
-</div>
-</body>
-</html>
+<!-- PAY $35 BUTTON -->
+<button onclick="payWorldRemit(35)" style="width:100%;background:#0b7bff;color:white;padding:14px;border:none;border-radius:12px;font-weight:bold;">
+🌍 Pay $35 - WorldRemit to M-Pesa
+</button>
+
+<!-- PAY $95 BUTTON -->
+<button onclick="payWorldRemit(95)" style="width:100%;background:#ffcc00;color:black;padding:14px;border:none;border-radius:12px;font-weight:bold;margin-top:10px;">
+🌍 Pay $95 - BEST VALUE
+</button>
+
+<script>
+function payWorldRemit(amount){
+  const number = "254704982642";
+  navigator.clipboard.writeText(number);
+  alert("M-Pesa Number COPIED: " + number + "\n\nUSA CLIENTS: \n1. Open WorldRemit app\n2. Select Kenya - M-Pesa\n3. Paste number: " + number + "\n4. Name: Edwin Koech\n5. Amount: $" + amount + "\n\nNumber is copied - now paste it in WorldRemit!");
+  window.open("https://www.worldremit.com/en", "_blank");
+}
+</script>
